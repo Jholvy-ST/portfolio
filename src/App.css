@@ -81,7 +81,6 @@ a:-webkit-any-link {
 }
 
 .title {
-	padding: 10px;
 	font-family: 'Montserrat', sans-serif;
 }
 
@@ -139,20 +138,22 @@ a:-webkit-any-link {
 	text-align: center;
 }
 
-.technologies-container {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	background-color: #45454e;
-	padding-bottom: 20px;
-}
-
-.technologies-grid {
+.grid-container {
 	display: grid;
 	justify-content: center;
 	width: 100%;
 	grid-auto-flow: dense;
 	grid-auto-rows: auto;
+}
+
+.technologies-container {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background-color: #45454e;
+}
+
+.technologies-grid {
 	grid-template-columns: repeat(auto-fit, 250px);
 }
 
@@ -172,12 +173,7 @@ a:-webkit-any-link {
 }
 
 .projects-container {
-	display: grid;
-	justify-content: center;
-	width: 100%;
-	gap: 15px;
-	grid-auto-flow: dense;
-	grid-auto-rows: auto;
+	column-gap: 20px;
 	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 	padding: 2px 25px 25px 25px;
 }

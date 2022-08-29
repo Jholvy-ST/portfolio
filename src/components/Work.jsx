@@ -2,10 +2,10 @@ const Work = () => {
 
 	return (
 		<div className="full-height">
-			<div className="title">
+			<div className="title centered-div">
 				<h2>My projects</h2>
 			</div>
-			<div className="projects-container">
+			<div className="projects-container grid-container">
 				<div className="project">
 					<div>
 						<div className="centered-div">

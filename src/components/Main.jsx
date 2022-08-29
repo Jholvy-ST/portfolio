@@ -7,7 +7,7 @@ const Main = () => {
 				</div>
 				<div className="centered-text">
 					<p>
-						I am a junior web developer interested in learning new things
+						I am a junior web developer
 					</p>
 				</div>
 			</div>
@@ -17,7 +17,7 @@ const Main = () => {
 						<h2>Technologies I use</h2>
 					</div>
 				</div>
-				<div className="technologies-grid">
+				<div className="technologies-grid grid-container">
 					<div className="technology centered-div">
 						<div className="technology-img">
 							<img src="https://drive.google.com/uc?export=view&id=16O36K2NZZ6nj06tf7qY1zgTFtZ9VyC_n" alt="javascript logo"/>
