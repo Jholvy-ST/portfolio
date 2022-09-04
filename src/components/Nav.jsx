@@ -27,12 +27,19 @@ const Nav = () => {
 		document.getElementById("myDropdown").classList.toggle("show");
 	}
 
+	const highlight = (e) => {
+		const items = Array.from(document.getElementsByClassName("nav-item"))
+		//e.preventDefault()
+		items.forEach(link => link.classList.remove("highlight"))
+		e.target.parentElement.parentElement.classList.add("highlight")
+	}
+
 	return (
 		<div className="header">
 			<div className="header-title">
 				<h2>Jholvy ST</h2>
 			</div>
-			<div>
+			<div className="mobile-menu">
 				<div className="dropdown">
 						<div onClick={showMenu}>
 							<h2 className="menu-icon">&#9776;</h2>
@@ -45,6 +52,23 @@ const Nav = () => {
 							<Link to='/contact' className='linkD'>Contact</Link>
 						</div>
 					</div>
+			</div>
+			<div className="desktop-menu">
+				<div className="nav-item">
+					<h3 onClick={highlight}>
+						<Link to='/' className='linkD'>About</Link>
+					</h3>
+				</div>
+				<div className="nav-item">
+					<h3 onClick={highlight}>
+						<Link to='/work' className='linkD'>Work</Link>
+					</h3>
+				</div>
+				<div className="nav-item">
+					<h3 onClick={highlight}>
+						<Link to='/contact' className='linkD'>Contact</Link>
+					</h3>
+				</div>
 			</div>
 		</div>
 	)
