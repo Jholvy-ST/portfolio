@@ -45,10 +45,24 @@ a:-webkit-any-link {
   cursor: pointer;
 }
 
+i {
+	font-size: 2rem;
+	transition: transform 0.5s;
+}
+
+i:hover {
+	transform: scale(1.25);
+}
+
 li { 
 	margin-left: 1em;
 	position: relative;
 	width: fit-content;
+	transition: transform 0.5s;
+}
+
+li:hover {
+	transform: translateX(5%);
 }
 
 li.arrow {
@@ -116,6 +130,11 @@ li.arrow::before {
 }
 
 .desktop-menu {
+	display: flex;
+	column-gap: 20px;
+}
+
+.nav {
 	display: flex;
 	column-gap: 20px;
 }
@@ -335,6 +354,7 @@ li.arrow::before {
 .contact-container {
 	display: flex;
 	flex-direction: column;
+	height: 100%;
 	padding: 15px;
 	animation: fadeIn 1s ease-in-out;
 }
@@ -358,8 +378,13 @@ li.arrow::before {
 	font-family: 'Lato', sans-serif;
 }
 
+.footer {
+	display: flex;
+	padding: 0px 0px 20px 30px;
+}
+
 @media only screen 
-and (max-width: 748px) {
+and (max-width: 750px) {
 	.last-tech {
 		grid-column: 1 / span 2;
   	grid-row: 2 / 2;
@@ -380,7 +405,7 @@ and (max-width: 748px) {
 }
 
 @media only screen 
-and (max-width: 500px) {
+and (max-width: 550px) {
 	/*.technologies-grid {
 		grid-template-columns: repeat(auto-fit, 140px);
 	}
@@ -399,7 +424,9 @@ and (max-width: 500px) {
 	}
 
 	.mobile-menu {
-		display: block;
+		display: flex;
+		align-items: center;
+		column-gap: 15px;
 	}
 }
 

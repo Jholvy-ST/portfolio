@@ -1,6 +1,11 @@
 const Footer = () => {
+	
 	return (
-		<div></div>
+		<div className="footer">
+			<a aria-label="github" href="https://github.com/Jholvy-ST">
+				<i className="fa fa-github"></i>
+			</a>
+		</div>
 	)
 }
 

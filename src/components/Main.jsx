@@ -1,11 +1,19 @@
+import { useEffect } from "react"
+
 const Main = () => {
+	useEffect( () => {
+		document.getElementById("main-title").classList.add("highlight")
+	}, [])
+
+
+
 	return (
 		<div className="full-height">
 			<div className="centered-div">
 				<div className="title">
 					<h2>I'm Jholvy</h2>
 				</div>
-				<div className="centered-text">
+				<div id="main-title" className="centered-text">
 					<p>
 						I am a junior web developer
 					</p>
