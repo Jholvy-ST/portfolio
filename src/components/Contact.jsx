@@ -14,8 +14,14 @@ const Contact = () => {
           console.log(error.text);
       });
 
+		showNotification()
 		e.target.reset();
   };
+
+	const showNotification = () => {
+		const popUp = document.getElementsByClassName("pop-up-container")[0]
+		popUp.style.display = "flex"
+	}
 
 	//Changes the height of the textarea depending on the content
 	const adjustHeight = (e) => {

@@ -13,7 +13,7 @@ const Nav = () => {
 	}, [])
 
 	useEffect( () => {
-		highlight()
+		underline()
 	}, [])
 	
 	//Hides the header's dropdown menu when the user clicks elsewhere
@@ -31,17 +31,17 @@ const Nav = () => {
 		document.getElementById("myDropdown").classList.toggle("show");
 	}
 
-	const highlight = () => {
+	const underline = () => {
 		const items = Array.from(document.getElementsByClassName("nav-item"))
-		items.forEach(link => link.classList.remove("highlight"))
-		//e.target.parentElement.parentElement.classList.add("highlight")
+		items.forEach(link => link.classList.remove("underlined"))
+		//e.target.parentElement.parentElement.classList.add("underlined")
 		const pathname = window.location.pathname;
 		const lastPart = pathname.split("/").pop();
 
 		if (lastPart !== '') {
-			document.getElementById(lastPart).classList.add("highlight")
+			document.getElementById(lastPart).classList.add("underlined")
 		} else {
-			document.getElementById('about').classList.add("highlight")
+			document.getElementById('about').classList.add("underlined")
 		}
 	}
 
@@ -72,17 +72,17 @@ const Nav = () => {
 			<div className="desktop-menu">
 				<div className="nav">
 					<div id="about" className="nav-item">
-						<h3 onClick={highlight}>
+						<h3 onClick={underline}>
 							<Link to='/' className='linkD'>About</Link>
 						</h3>
 					</div>
 					<div id="work" className="nav-item">
-						<h3 onClick={highlight}>
+						<h3 onClick={underline}>
 							<Link to='/work' className='linkD'>Work</Link>
 						</h3>
 					</div>
 					<div id="contact" className="nav-item">
-						<h3 onClick={highlight}>
+						<h3 onClick={underline}>
 							<Link to='/contact' className='linkD'>Contact</Link>
 						</h3>
 					</div>

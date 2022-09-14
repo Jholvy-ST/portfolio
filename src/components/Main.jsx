@@ -13,7 +13,7 @@ const Main = () => {
 				<div className="title">
 					<h2>I'm Jholvy</h2>
 				</div>
-				<div id="main-title" className="centered-text">
+				<div className="centered-text">
 					<p>
 						I am a junior web developer
 					</p>
